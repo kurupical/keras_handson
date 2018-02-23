@@ -50,7 +50,5 @@ history = model.fit(x_train, y_train,
                     verbose=1,
                     validation_data=(x_test, y_test))
 
-# 入力データを推論
-pred = model.predict_classes(x_test, batch_size=1, verbose=0)
-print("NNの予想は:{}".format(pred))
+score = model.evaluate(x_test, y_test, verbose=0)
 
